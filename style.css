@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #101010;
+    font-family: 'Judson', serif;
+}
+
+.cards {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    gap: 30px;
+    height: 900px;
+    width: 600px;
+}
+
+
+svg {
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+.marco {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetaInfo {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    width: calc(95% - 100px);
+    height: calc(95% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fondoTarjeta{
+    position: absolute;
+    width: calc(95% - 100px);
+    height: calc(95% - 100px);
+    z-index: -2;
+    overflow: hidden;
+    transition: 0.3s all;
+}
+.fondoTarjeta img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+    transition: 0.3s all;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.card:hover .wallpaperBo{
+    object-fit: cover;
+    transform: scale(1.1);
+}
+h2{
+    color: #CCA968;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.info{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 33.3333% 33.3333% 33.3333%;
+}
+.descJefe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
+.bossFoto >*{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+p{
+    color: #d9d9d9;
+    font-style: italic;
+    text-align: center;
+}
+.cabecera{
+    padding: 5%;
+}
+.pie{
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-rows: 10% 70% 20%;
+    align-items: center;
+    width: 100%;
+}
+.pie img{
+    height: 50%;
+}
+h3{
+    text-align: center;
+    color: #d9d9d9;
+    margin-top: 20px;
+}
+
+.botonMas{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #CCA968;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s all;
+    border: 1px solid transparent;
+}
+.botonMas:hover{
+    position: relative;
+    z-index: 999;
+    color: #d9d9d9;
+    background-color: transparent;
+    border-bottom: 1px solid #CCA968;
+    cursor: pointer;
+}
+
+/* botones sig antes */
+#prevBtn{
+    height: 30px;
+    width: 60px;
+}
+
+#nextBtn{
+    height: 30px;
+    width: 60px;
+}

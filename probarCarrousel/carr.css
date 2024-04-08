@@ -1,0 +1,25 @@
+.carousel {
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card {
+    width: 290px;
+    height: 280px;
+    position: absolute;
+    top: 10px;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(-300px);
+    background-color: red;
+}
+
+.card:nth-child(1){
+    background-color: blue;
+    transform: translateX(0px);
+}
+.card:nth-child(2){
+    background-color: blue;
+    transform: translateX(300px);
+}

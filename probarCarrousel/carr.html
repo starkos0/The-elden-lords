@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="carr.css">
+</head>
+
+<body>
+    <div class="carousel">
+        <div class="card">Contenido de la primera carta</div>
+        <div class="card">Contenido de la segunda carta</div>
+        <div class="card">Contenido de la tercera carta</div>
+        <div class="card">Contenido de la cuarta carta</div>
+    </div>
+    <button id="prevBtn">Anterior</button>
+    <button id="nextBtn">Siguiente</button>
+    <script>
+        const carousel = document.querySelector('.cards');
+        const cards = carousel.querySelectorAll('.card');
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
+
+        let currentPosition = 0;
+
+        prevBtn.addEventListener('click', () => {
+            currentPosition -= 2;
+            if (currentPosition < 0) {
+                currentPosition = 0;
+            }
+            updateCards();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentPosition += 2;
+            if (currentPosition > cards.length - 2) {
+                currentPosition = cards.length - 2;
+            }
+            updateCards();
+        });
+
+        function updateCards() {
+            cards.forEach((card, index) => {
+                const offset = index - currentPosition;
+                const translateX = offset * 1280;
+                card.style.transform = `translateX(${translateX}px)`;
+            });
+        }
+    </script>
+</body>
+
+</html>
